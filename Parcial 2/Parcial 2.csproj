@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{986FFFA5-2360-404B-A11F-0D696B023C47}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Parcial_2</RootNamespace>
+    <AssemblyName>Parcial 2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\Datos_estudiantesBLL.cs" />
+    <Compile Include="BLL\especialidades_generalesBLL.cs" />
+    <Compile Include="BLL\estudiantes_informaticaBLL.cs" />
+    <Compile Include="BLL\estudiantes_inglesBLL.cs" />
+    <Compile Include="BLL\nombre_rutasBLL.cs" />
+    <Compile Include="DAL\Database.cs" />
+    <Compile Include="DAL\datos_estudiantesDAL.cs" />
+    <Compile Include="DAL\especialidades_generalesDAL.cs" />
+    <Compile Include="DAL\estudiantes_informaticaDAL.cs" />
+    <Compile Include="DAL\estudiantes_inglesDAL.cs" />
+    <Compile Include="DAL\nombre_rutasDAL.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PL\especialidades_generalescs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\especialidades_generalescs.Designer.cs">
+      <DependentUpon>especialidades_generalescs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\estudiantes_informatica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\estudiantes_informatica.Designer.cs">
+      <DependentUpon>estudiantes_informatica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\estudiantes_ingles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\estudiantes_ingles.Designer.cs">
+      <DependentUpon>estudiantes_ingles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\nombre_rutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\nombre_rutas.Designer.cs">
+      <DependentUpon>nombre_rutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\especialidades_generalescs.resx">
+      <DependentUpon>especialidades_generalescs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\estudiantes_informatica.resx">
+      <DependentUpon>estudiantes_informatica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\estudiantes_ingles.resx">
+      <DependentUpon>estudiantes_ingles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\nombre_rutas.resx">
+      <DependentUpon>nombre_rutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
